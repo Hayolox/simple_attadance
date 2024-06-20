@@ -1,0 +1,39 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Mobile Banking DEV",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_development.dart",
+            "args": [
+                "--flavor",
+                "dev",
+                "--dart-define",
+                "FLAVOR=dev"
+                
+            ]
+        },
+        {
+            "name": "Mobile Banking DEV - Release",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_development.dart",
+            "args": [
+                "--flavor",
+                "dev",
+                "--release"
+            ]
+        },
+        {
+            "name": "Mobile Banking STG",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_staging.dart",
+            "args": [
+                "--flavor",
+                "stg"
+            ]
+        }
+    ]
+}

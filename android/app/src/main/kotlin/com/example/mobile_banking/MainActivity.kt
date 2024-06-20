@@ -1,4 +1,4 @@
-package com.example.mobile_banking
+package com.dwidasa.product
 
 import io.flutter.embedding.android.FlutterActivity
 

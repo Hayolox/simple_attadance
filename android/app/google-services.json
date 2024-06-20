@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "469871989402",
+    "project_id": "mb-product-staging",
+    "storage_bucket": "mb-product-staging.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:469871989402:android:43e1e8946ba8b6190c4523",
+        "android_client_info": {
+          "package_name": "com.dwidasa.product.mobilebanking_v3_staging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "469871989402-fet03dhjp79j0dhpbsotap90o61rr78f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3pGDF7x-IRmx9qCDk3fKgEo1eGlw3ZNE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "469871989402-fet03dhjp79j0dhpbsotap90o61rr78f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

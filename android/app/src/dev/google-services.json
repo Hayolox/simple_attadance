@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "453657791078",
+    "project_id": "product-2b8d9",
+    "storage_bucket": "product-2b8d9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:453657791078:android:1bf3893328b6c3c6967ba7",
+        "android_client_info": {
+          "package_name": "com.dwidasa.product.mobilebanking_v3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "453657791078-pf61g7uc3ireba9ufb9b83j7c62310mu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZwB00ID-HCsq71KeHSQLcJRgalq5mdT8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "453657791078-pf61g7uc3ireba9ufb9b83j7c62310mu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "453657791078-56ug2gn65353vlrfaj4svd6vqinevhq3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dwidasa.product.mobile-banking"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

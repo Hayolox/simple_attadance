@@ -91,10 +91,10 @@ class _AppState extends State<App> {
     sl<Global>().remoteConfig = remoteConfig;
 
     //decompose
-    var map = json.decode(remoteConfig.getString('sslValue'));
-    map.values.forEach((e) {
-      sl<Global>().rawData.add(e);
-    });
+    // var map = json.decode(remoteConfig.getString('sslValue'));
+    // map.values.forEach((e) {
+    //   sl<Global>().rawData.add(e);
+    // });
   }
 
   Future<void> _initPlatformState() async {

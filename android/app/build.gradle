@@ -24,8 +24,8 @@ if (flutterVersionName == null) {
 }
 
 android {
-    namespace "com.example.mobile_banking"
-    compileSdkVersion 33
+    namespace "com.dwidasa.product"
+    compileSdkVersion 34
     ndkVersion flutter.ndkVersion
 
     compileOptions {
@@ -42,16 +42,33 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.mobile_banking"
+        applicationId "com.dwidasa.product"
         minSdkVersion 23
         targetSdkVersion 33
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        multiDexEnabled true
     }
 
     buildTypes {
         release {
             signingConfig signingConfigs.debug
+        }
+    }
+
+    flavorDimensions "app"
+
+    productFlavors {
+        dev {
+            dimension "app"
+            resValue "string", "app_name", "Mobile Banking PAC DEV"
+            applicationIdSuffix ".mobilebanking_v3"
+            versionNameSuffix ".dev"
+        }
+        stg {
+            dimension "app"
+            resValue "string", "app_name", "Mobile Banking PAC STG"
+            applicationIdSuffix ".mobilebanking_v3_staging"
         }
     }
 }
