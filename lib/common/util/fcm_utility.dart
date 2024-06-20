@@ -21,12 +21,12 @@ class FcmUtility {
 
     String? token = await _messaging.getToken();
 
+    _messaging.subscribeToTopic('topicMessaging');
+
     log("tokens : $token");
   }
 
   static newFirebaseSetup() {
-    _messaging.subscribeToTopic('topicMessaging');
-
     FirebaseMessaging.onMessage.listen(
       (RemoteMessage message) {
         NotificationUtility.showNotification(
