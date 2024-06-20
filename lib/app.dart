@@ -122,6 +122,7 @@ class _AppState extends State<App> {
     _initPlatformState();
     FcmUtility.registerNotification();
     FcmUtility.newFirebaseSetup();
+    NotificationUtility.requestPermission();
     super.initState();
   }
 

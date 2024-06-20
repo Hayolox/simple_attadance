@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'dart:io';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class NotificationUtility {
@@ -16,12 +17,12 @@ class NotificationUtility {
       AndroidInitializationSettings initializationSettingsAndroid =
           const AndroidInitializationSettings('@mipmap/ic_launcher');
 
-      final DarwinInitializationSettings initializationSettingsDarwin =
+      const DarwinInitializationSettings initializationSettingsDarwin =
           DarwinInitializationSettings(
-        requestAlertPermission: true,
-        requestBadgePermission: true,
-        requestSoundPermission: true,
-        onDidReceiveLocalNotification: (id, title, body, payload) {},
+        requestAlertPermission: false,
+        requestBadgePermission: false,
+        requestSoundPermission: false,
+        onDidReceiveLocalNotification: null,
       );
 
       await notificationsPlugin
@@ -36,7 +37,6 @@ class NotificationUtility {
 
       await notificationsPlugin.initialize(
         initializationSettings,
-        onDidReceiveNotificationResponse: (details) {},
       );
     } catch (e) {
       log("error initNotification $e");
@@ -51,8 +51,6 @@ class NotificationUtility {
         importance: Importance.max,
         priority: Priority.high,
         styleInformation: BigTextStyleInformation(body ?? ''),
-        // sound: const RawResourceAndroidNotificationSound('shoope_sound'),
-        // playSound: true,
       );
 
       const DarwinNotificationDetails iOSPlatformChannelSpecifics =
@@ -65,6 +63,20 @@ class NotificationUtility {
     } catch (e) {
       log("error notificationDetails $e");
       rethrow;
+    }
+  }
+
+  static requestPermission() async {
+    if (Platform.isIOS) {
+      final iosImplementation =
+          notificationsPlugin.resolvePlatformSpecificImplementation<
+              IOSFlutterLocalNotificationsPlugin>();
+      await iosImplementation?.requestPermissions(
+        alert: true,
+        badge: true,
+        sound: true,
+        provisional: false,
+      );
     }
   }
 
