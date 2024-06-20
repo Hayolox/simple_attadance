@@ -1,16 +1,60 @@
-# mobile_banking
 
-A new Flutter project.
+# Getting Started
 
-## Getting Started
+1. After completing the cloning process, navigate to the "NameProject" directory.
+2. Create the .env and .dev.env files.
+3. In each file, add the following configuration:
 
-This project is a starting point for a Flutter application.
+```bash
+APP_NAME = ''
+APP_VERSION = ''
+BASE_URL = ''
+```
 
-A few resources to get you started if this is your first Flutter project:
+4. You can run the application using the flutter run command followed by the appropriate arguments based on your desired configuration :
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```bash
+flutter run lib/main_development.dart --flavor dev     
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+5. Alternatively, you can create a launch.json file inside the .vscode folder with the following configurations:
+   
+```bash
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Corporate Mobile Banking DEV",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_development.dart",
+            "args": [
+                "--flavor",
+                "dev"
+            ]
+        },
+        {
+            "name": "Corporate Mobile Banking DEV - Release",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_development.dart",
+            "args": [
+                "--flavor",
+                "dev",
+                "--release"
+            ]
+        },
+        {
+            "name": "Corporate Mobile Banking STG",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_staging.dart",
+            "args": [
+                "--flavor",
+                "stg"
+            ]
+        }
+    ]
+}
+
+```
