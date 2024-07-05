@@ -16,7 +16,7 @@ void createCleanArchitecture(
 
   // Feature folders
   var featureFolders = [
-    "features/$featureName/data/datasources",
+    "data/datasource/remote/$featureName",
     // "features/$featureName/data/models",
     // "features/$featureName/data/repositories",
     // "features/$featureName/domain/entities",
@@ -38,12 +38,12 @@ void createCleanArchitecture(
 // data/datasource/remote/example/example_remote_data_source.dart
   // Create example files with content
   var exampleFiles = {
-    "data/datasource/remote/example/${featureName}_remote_data_source.dart":
-        // "import 'package:mobile_banking/core/network/call_api_service.dart';\n"
-        //     "import 'package:mobile_banking/data/model/${featureName.toLowerCase()}/request/${featureName.toLowerCase()}_request_model.dart';\n"
-        //     "import 'package:mobile_banking/data/model/${featureName.toLowerCase()}/response/${featureName.toLowerCase()}_response_model.dart';\n"
-        //     "import 'package:mobile_banking/injection/dependency_injection.dart';\n"
-        "abstract class ${featureName.capitalize()}RemoteDataSources {\n"
+    "data/datasource/remote/$featureName/${featureName}_remote_data_source.dart":
+        "import 'package:mobile_banking/core/network/call_api_service.dart';\n"
+            "import 'package:mobile_banking/data/model/${featureName.toLowerCase()}/request/${featureName.toLowerCase()}_request_model.dart';\n"
+            "import 'package:mobile_banking/data/model/${featureName.toLowerCase()}/response/${featureName.toLowerCase()}_response_model.dart';\n"
+            "import 'package:mobile_banking/injection/dependency_injection.dart';\n"
+            "abstract class ${featureName.capitalize()}RemoteDataSources {\n"
             " const ${featureName.capitalize()}RemoteDataSources();\n"
             "  Future<${featureName.capitalize()}ModelResponse> ${featureName.toLowerCase()}({required ${featureName.capitalize()}ModelRequest request});\n"
             "}\n\n"
@@ -69,7 +69,7 @@ void createCleanArchitecture(
             "  }\n"
             "}",
 
-    // // Domain files
+    // Domain files
     // "features/$featureName/domain/entities/${featureName}_entity.dart":
     //     "class ${featureName.capitalize()}Entity {\n  final String id;\n  final String name;\n\n  ${featureName.capitalize()}Entity({required this.id, required this.name});\n}",
     // "features/$featureName/domain/repositories/${featureName}_repository.dart":
