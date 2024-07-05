@@ -1,7 +1,6 @@
 import 'dart:io';
 
 void createCleanArchitecture(
-  String projectName,
   String featureName,
 ) {
   var baseDir = Directory(".");
@@ -40,11 +39,11 @@ void createCleanArchitecture(
   // Create example files with content
   var exampleFiles = {
     "data/datasource/remote/example/${featureName}_remote_data_source.dart":
-        "import 'package:mobile_banking/core/network/call_api_service.dart';\n"
-            "import 'package:mobile_banking/data/model/${featureName.toLowerCase()}/request/${featureName.toLowerCase()}_request_model.dart';\n"
-            "import 'package:mobile_banking/data/model/${featureName.toLowerCase()}/response/${featureName.toLowerCase()}_response_model.dart';\n"
-            "import 'package:mobile_banking/injection/dependency_injection.dart';\n"
-            "abstract class ${featureName.capitalize()}RemoteDataSources {\n"
+        // "import 'package:mobile_banking/core/network/call_api_service.dart';\n"
+        //     "import 'package:mobile_banking/data/model/${featureName.toLowerCase()}/request/${featureName.toLowerCase()}_request_model.dart';\n"
+        //     "import 'package:mobile_banking/data/model/${featureName.toLowerCase()}/response/${featureName.toLowerCase()}_response_model.dart';\n"
+        //     "import 'package:mobile_banking/injection/dependency_injection.dart';\n"
+        "abstract class ${featureName.capitalize()}RemoteDataSources {\n"
             " const ${featureName.capitalize()}RemoteDataSources();\n"
             "  Future<${featureName.capitalize()}ModelResponse> ${featureName.toLowerCase()}({required ${featureName.capitalize()}ModelRequest request});\n"
             "}\n\n"
@@ -201,8 +200,7 @@ void createCleanArchitecture(
     }
   });
 
-  print(
-      "Clean architecture structure for feature '$featureName' created successfully in project '$projectName'.");
+  print("Clean architecture structure for feature '$featureName'");
 }
 
 extension StringExtension on String {
@@ -212,12 +210,10 @@ extension StringExtension on String {
 }
 
 void main(List<String> arguments) {
-  if (arguments.length != 2) {
-    print(
-        "Usage: dart create_clean_architecture.dart <project_name> <feature_name>");
+  if (arguments.length != 1) {
+    print("Usage: dart create_clean_architecture.dart <feature_name>");
   } else {
-    var projectName = arguments[0];
-    var featureName = arguments[1];
-    createCleanArchitecture(projectName, featureName);
+    var featureName = arguments[0];
+    createCleanArchitecture(featureName);
   }
 }

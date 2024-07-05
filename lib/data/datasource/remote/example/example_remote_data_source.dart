@@ -5,7 +5,6 @@ import 'package:mobile_banking/injection/dependency_injection.dart';
 
 abstract class ExampleRemoteDataSources {
   const ExampleRemoteDataSources();
-
   Future<ExampleModelResponse> example({required ExampleModelRequest request});
 }
 
@@ -17,17 +16,15 @@ class ExampleRemoteDataSourcesImpl implements ExampleRemoteDataSources {
       {required ExampleModelRequest request}) async {
     try {
       /**
-       * example code for get data from api service
-       */
-      // var dataRequest = request.toJson();
-
+     * example code for get data from api service
+     */
+      //var dataRequest = request.toJson();
       // final response = await callService.connect(
-      //   AppConstants.appAPI.authenticationSignIn,
-      //   dataRequest,
-      //   HttpMethodConstant.post,
-      // );
-
-      // return LoginResponse.fromJson(response.data);
+      // AppConstants.appAPI.authenticationSignIn
+      // dataRequest
+      // HttpMethodConstant.post
+      //);
+      //return LoginResponse.fromJson(response.data);
       return ExampleModelResponse();
     } catch (e) {
       rethrow;
