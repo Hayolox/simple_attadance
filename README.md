@@ -24,7 +24,7 @@ flutter run lib/main_development.dart --flavor dev
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Corporate Mobile Banking DEV",
+            "name": "featureName",
             "request": "launch",
             "type": "dart",
             "program": "lib/main_development.dart",
@@ -34,7 +34,7 @@ flutter run lib/main_development.dart --flavor dev
             ]
         },
         {
-            "name": "Corporate Mobile Banking DEV - Release",
+            "name": "featureName - Release",
             "request": "launch",
             "type": "dart",
             "program": "lib/main_development.dart",
@@ -45,7 +45,7 @@ flutter run lib/main_development.dart --flavor dev
             ]
         },
         {
-            "name": "Corporate Mobile Banking STG",
+            "name": "featureName STG",
             "request": "launch",
             "type": "dart",
             "program": "lib/main_staging.dart",
@@ -58,3 +58,4 @@ flutter run lib/main_development.dart --flavor dev
 }
 
 ```
+

@@ -15,7 +15,7 @@ void main() async {
       );
 
   final stgAppConfig = FlavorConfig(
-    appName: '',
+    appName: 'Attandace Kita',
     flavor: FlavorType.staging,
   );
   await dotenv.load(fileName: '.env');
