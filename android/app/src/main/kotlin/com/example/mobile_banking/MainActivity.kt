@@ -1,4 +1,4 @@
-package com.dwidasa.product
+package com.attedance.kita
 
 import io.flutter.embedding.android.FlutterActivity
 

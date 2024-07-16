@@ -24,7 +24,7 @@ if (flutterVersionName == null) {
 }
 
 android {
-    namespace "com.dwidasa.product"
+    namespace "com.attedance.kita"
     compileSdkVersion 34
     ndkVersion flutter.ndkVersion
 
@@ -42,7 +42,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.dwidasa.product"
+        applicationId "com.attedance.kita"
         minSdkVersion 23
         targetSdkVersion 33
         versionCode flutterVersionCode.toInteger()
@@ -61,14 +61,14 @@ android {
     productFlavors {
         dev {
             dimension "app"
-            resValue "string", "app_name", "Mobile Banking PAC DEV"
-            applicationIdSuffix ".mobilebanking_v3"
+            resValue "string", "app_name", "Attendece Kita DEV"
+            applicationIdSuffix ".dev"
             versionNameSuffix ".dev"
         }
         stg {
             dimension "app"
-            resValue "string", "app_name", "Mobile Banking PAC STG"
-            applicationIdSuffix ".mobilebanking_v3_staging"
+            resValue "string", "app_name", "Attendece Kita STG"
+            applicationIdSuffix ".staging"
         }
     }
 }

@@ -15,7 +15,7 @@ void main() async {
       );
 
   final stgAppConfig = FlavorConfig(
-    appName: 'Mobile Banking PAC STG',
+    appName: '',
     flavor: FlavorType.staging,
   );
   await dotenv.load(fileName: '.env');

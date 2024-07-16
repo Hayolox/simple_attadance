@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:453657791078:android:1bf3893328b6c3c6967ba7",
         "android_client_info": {
-          "package_name": "com.dwidasa.product.mobilebanking_v3"
+          "package_name": "com.attedance.kita.dev"
         }
       },
       "oauth_client": [
@@ -34,7 +34,7 @@
               "client_id": "453657791078-56ug2gn65353vlrfaj4svd6vqinevhq3.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.dwidasa.product.mobile-banking"
+                "bundle_id": "com.attedance.kita.dev"
               }
             }
           ]

@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Mobile Banking DEV",
+            "name": "Attedance Kita DEV",
             "request": "launch",
             "type": "dart",
             "program": "lib/main_development.dart",
@@ -15,7 +15,7 @@
             ]
         },
         {
-            "name": "Mobile Banking DEV - Release",
+            "name": "Attedance Kita DEV - Release",
             "request": "launch",
             "type": "dart",
             "program": "lib/main_development.dart",

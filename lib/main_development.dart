@@ -15,7 +15,7 @@ void main() async {
       );
 
   final devAppConfig = FlavorConfig(
-    appName: 'Mobile Banking PAC DEV',
+    appName: 'Attandace Kita DEV',
     flavor: FlavorType.development,
   );
   await dotenv.load(fileName: '.dev.env');
